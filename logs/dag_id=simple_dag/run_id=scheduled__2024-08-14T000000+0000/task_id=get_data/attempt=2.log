@@ -1,0 +1,37 @@
+[2024-08-15T08:21:13.217+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-08-15T08:21:13.762+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: simple_dag.get_data scheduled__2024-08-14T00:00:00+00:00 [queued]>
+[2024-08-15T08:21:13.786+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: simple_dag.get_data scheduled__2024-08-14T00:00:00+00:00 [queued]>
+[2024-08-15T08:21:13.790+0000] {taskinstance.py:2306} INFO - Starting attempt 2 of 2
+[2024-08-15T08:21:13.830+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): get_data> on 2024-08-14 00:00:00+00:00
+[2024-08-15T08:21:13.849+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62: DeprecationWarning: This process (pid=6513) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-08-15T08:21:13.855+0000] {standard_task_runner.py:64} INFO - Started process 6516 to run task
+[2024-08-15T08:21:13.856+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'simple_dag', 'get_data', 'scheduled__2024-08-14T00:00:00+00:00', '--job-id', '189', '--raw', '--subdir', 'DAGS_FOLDER/envioemail.py', '--cfg-path', '/tmp/tmpvyk2fhcj']
+[2024-08-15T08:21:13.863+0000] {standard_task_runner.py:91} INFO - Job 189: Subtask get_data
+[2024-08-15T08:21:14.012+0000] {task_command.py:426} INFO - Running <TaskInstance: simple_dag.get_data scheduled__2024-08-14T00:00:00+00:00 [running]> on host 18efa902f572
+[2024-08-15T08:21:14.271+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='simple_dag' AIRFLOW_CTX_TASK_ID='get_data' AIRFLOW_CTX_EXECUTION_DATE='2024-08-14T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-08-14T00:00:00+00:00'
+[2024-08-15T08:21:14.274+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-08-15T08:21:14.379+0000] {base.py:84} INFO - Using connection ID 'my_mssql_conn_id' for task execution.
+[2024-08-15T08:21:14.601+0000] {warnings.py:112} WARNING - /opt/***/dags/funciones.py:33: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn)
+
+[2024-08-15T08:21:16.523+0000] {logging_mixin.py:188} INFO - Datos leidos
+[2024-08-15T08:21:16.527+0000] {python.py:237} INFO - Done. Returned value was:         SalesOrderID  OrderQty                ProductID
+0              43659         1   Mountain-100 Black, 42
+1              43659         3   Mountain-100 Black, 44
+2              43659         1   Mountain-100 Black, 48
+3              43659         1  Mountain-100 Silver, 38
+4              43659         1  Mountain-100 Silver, 42
+...              ...       ...                      ...
+121312         75122         1    Fender Set - Mountain
+121313         75122         1             AWC Logo Cap
+121314         75123         1    Fender Set - Mountain
+121315         75123         1   All-Purpose Bike Stand
+121316         75123         1             AWC Logo Cap
+
+[121317 rows x 3 columns]
+[2024-08-15T08:21:16.583+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-08-15T08:21:17.166+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=simple_dag, task_id=get_data, run_id=scheduled__2024-08-14T00:00:00+00:00, execution_date=20240814T000000, start_date=20240815T082113, end_date=20240815T082117
+[2024-08-15T08:21:17.249+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2024-08-15T08:21:17.273+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

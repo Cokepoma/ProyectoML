@@ -1,0 +1,38 @@
+[2024-09-01T14:00:24.794+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-09-01T14:00:25.245+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Apriori_project.get_data manual__2024-09-01T14:00:16.516814+00:00 [queued]>
+[2024-09-01T14:00:25.270+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Apriori_project.get_data manual__2024-09-01T14:00:16.516814+00:00 [queued]>
+[2024-09-01T14:00:25.275+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-09-01T14:00:25.314+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): get_data> on 2024-09-01 14:00:16.516814+00:00
+[2024-09-01T14:00:25.328+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62: DeprecationWarning: This process (pid=7620) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-01T14:00:25.334+0000] {standard_task_runner.py:64} INFO - Started process 7623 to run task
+[2024-09-01T14:00:25.334+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'Apriori_project', 'get_data', 'manual__2024-09-01T14:00:16.516814+00:00', '--job-id', '403', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmpe6csuct8']
+[2024-09-01T14:00:25.343+0000] {standard_task_runner.py:91} INFO - Job 403: Subtask get_data
+[2024-09-01T14:00:25.471+0000] {task_command.py:426} INFO - Running <TaskInstance: Apriori_project.get_data manual__2024-09-01T14:00:16.516814+00:00 [running]> on host 19bb8daff211
+[2024-09-01T14:00:25.762+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='jorgepons90@gmail.com,facturasjorgepons@gmail.com' AIRFLOW_CTX_DAG_OWNER='Jorge Pons' AIRFLOW_CTX_DAG_ID='Apriori_project' AIRFLOW_CTX_TASK_ID='get_data' AIRFLOW_CTX_EXECUTION_DATE='2024-09-01T14:00:16.516814+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-01T14:00:16.516814+00:00'
+[2024-09-01T14:00:25.765+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-09-01T14:00:25.899+0000] {base.py:84} INFO - Using connection ID 'my_mssql_conn_id' for task execution.
+[2024-09-01T14:00:25.962+0000] {warnings.py:112} WARNING - /opt/***/dags/b_get_data.py:32: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn)
+
+[2024-09-01T14:00:28.645+0000] {logging_mixin.py:188} INFO - Datos leidos
+[2024-09-01T14:00:28.673+0000] {python.py:237} INFO - Done. Returned value was:         SalesOrderID  OrderQty                ProductID
+0              43659         1   Mountain-100 Black, 42
+1              43659         3   Mountain-100 Black, 44
+2              43659         1   Mountain-100 Black, 48
+3              43659         1  Mountain-100 Silver, 38
+4              43659         1  Mountain-100 Silver, 42
+...              ...       ...                      ...
+121312         75122         1    Fender Set - Mountain
+121313         75122         1             AWC Logo Cap
+121314         75123         1    Fender Set - Mountain
+121315         75123         1   All-Purpose Bike Stand
+121316         75123         1             AWC Logo Cap
+
+[121317 rows x 3 columns]
+[2024-09-01T14:00:28.715+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-09-01T14:00:29.065+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=Apriori_project, task_id=get_data, run_id=manual__2024-09-01T14:00:16.516814+00:00, execution_date=20240901T140016, start_date=20240901T140025, end_date=20240901T140029
+[2024-09-01T14:00:29.129+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2024-09-01T14:00:29.248+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-09-01T14:00:29.260+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

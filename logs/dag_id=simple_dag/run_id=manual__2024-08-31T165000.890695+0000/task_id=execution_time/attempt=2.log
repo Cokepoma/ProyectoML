@@ -1,0 +1,44 @@
+[2024-08-31T17:10:07.614+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-08-31T17:10:07.844+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: simple_dag.execution_time manual__2024-08-31T16:50:00.890695+00:00 [queued]>
+[2024-08-31T17:10:07.861+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: simple_dag.execution_time manual__2024-08-31T16:50:00.890695+00:00 [queued]>
+[2024-08-31T17:10:07.864+0000] {taskinstance.py:2306} INFO - Starting attempt 2 of 2
+[2024-08-31T17:10:07.885+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): execution_time> on 2024-08-31 16:50:00.890695+00:00
+[2024-08-31T17:10:07.894+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62: DeprecationWarning: This process (pid=2717) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-08-31T17:10:07.896+0000] {standard_task_runner.py:64} INFO - Started process 2719 to run task
+[2024-08-31T17:10:07.896+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'simple_dag', 'execution_time', 'manual__2024-08-31T16:50:00.890695+00:00', '--job-id', '332', '--raw', '--subdir', 'DAGS_FOLDER/envioemail.py', '--cfg-path', '/tmp/tmpgrs18d7i']
+[2024-08-31T17:10:07.899+0000] {standard_task_runner.py:91} INFO - Job 332: Subtask execution_time
+[2024-08-31T17:10:07.961+0000] {task_command.py:426} INFO - Running <TaskInstance: simple_dag.execution_time manual__2024-08-31T16:50:00.890695+00:00 [running]> on host 19bb8daff211
+[2024-08-31T17:10:08.082+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='jorgepons90@gmail.com,facturasjorgepons@gmail.com' AIRFLOW_CTX_DAG_OWNER='Jorge Pons' AIRFLOW_CTX_DAG_ID='simple_dag' AIRFLOW_CTX_TASK_ID='execution_time' AIRFLOW_CTX_EXECUTION_DATE='2024-08-31T16:50:00.890695+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-08-31T16:50:00.890695+00:00'
+[2024-08-31T17:10:08.084+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-08-31T17:10:08.102+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-08-31T17:10:08.103+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/funciones.py", line 215, in insertar_tiempo_ejecucion
+    duration = (end_date - start_date).total_seconds()
+                ~~~~~~~~~^~~~~~~~~~~~
+TypeError: unsupported operand type(s) for -: 'NoneType' and 'datetime.datetime'
+[2024-08-31T17:10:08.120+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=simple_dag, task_id=execution_time, run_id=manual__2024-08-31T16:50:00.890695+00:00, execution_date=20240831T165000, start_date=20240831T171007, end_date=20240831T171008
+[2024-08-31T17:10:08.151+0000] {base.py:84} INFO - Using connection ID 'smtp_default' for task execution.
+[2024-08-31T17:10:08.152+0000] {email.py:271} INFO - Email alerting: attempt 1
+[2024-08-31T17:10:08.707+0000] {email.py:282} INFO - Sent an alert email to ['jorgepons90@gmail.com', 'facturasjorgepons@gmail.com']
+[2024-08-31T17:10:09.624+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 332 for task execution_time (unsupported operand type(s) for -: 'NoneType' and 'datetime.datetime'; 2719)
+[2024-08-31T17:10:09.641+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 1
+[2024-08-31T17:10:09.665+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-08-31T17:10:09.668+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

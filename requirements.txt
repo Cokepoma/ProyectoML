@@ -1,0 +1,7 @@
+apache-airflow-providers-odbc
+pyodbc 
+pandas 
+numpy
+sqlalchemy
+mlxtend
+tqdm

@@ -1,0 +1,3 @@
+[2024-08-16T00:16:02.136+0000] {processor.py:161} INFO - Started process (PID=1444) to work on /opt/airflow/dags/envioemail.py
+[2024-08-16T00:16:02.137+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/envioemail.py for tasks to queue
+[2024-08-16T00:16:02.141+0000] {logging_mixin.py:188} INFO - [2024-08-16T00:16:02.140+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/envioemail.py

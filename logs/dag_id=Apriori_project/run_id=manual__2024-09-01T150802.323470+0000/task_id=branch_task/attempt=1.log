@@ -1,0 +1,24 @@
+[2024-09-01T15:08:14.192+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-09-01T15:08:15.893+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Apriori_project.branch_task manual__2024-09-01T15:08:02.323470+00:00 [queued]>
+[2024-09-01T15:08:15.907+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Apriori_project.branch_task manual__2024-09-01T15:08:02.323470+00:00 [queued]>
+[2024-09-01T15:08:15.908+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-09-01T15:08:15.931+0000] {taskinstance.py:2330} INFO - Executing <Task(BranchPythonOperator): branch_task> on 2024-09-01 15:08:02.323470+00:00
+[2024-09-01T15:08:15.941+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62: DeprecationWarning: This process (pid=8460) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-09-01T15:08:15.944+0000] {standard_task_runner.py:64} INFO - Started process 8462 to run task
+[2024-09-01T15:08:15.944+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'Apriori_project', 'branch_task', 'manual__2024-09-01T15:08:02.323470+00:00', '--job-id', '415', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmpcetkxhw0']
+[2024-09-01T15:08:15.947+0000] {standard_task_runner.py:91} INFO - Job 415: Subtask branch_task
+[2024-09-01T15:08:16.016+0000] {task_command.py:426} INFO - Running <TaskInstance: Apriori_project.branch_task manual__2024-09-01T15:08:02.323470+00:00 [running]> on host 19bb8daff211
+[2024-09-01T15:08:16.166+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Apriori_project' AIRFLOW_CTX_TASK_ID='branch_task' AIRFLOW_CTX_EXECUTION_DATE='2024-09-01T15:08:02.323470+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-01T15:08:02.323470+00:00'
+[2024-09-01T15:08:16.170+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-09-01T15:08:16.194+0000] {baseoperator.py:400} WARNING - BranchPythonOperator.execute cannot be called outside TaskInstance!
+[2024-09-01T15:08:16.214+0000] {python.py:237} INFO - Done. Returned value was: processing_data
+[2024-09-01T15:08:16.215+0000] {branch.py:36} INFO - Branch into processing_data
+[2024-09-01T15:08:16.216+0000] {skipmixin.py:178} INFO - Following branch processing_data
+[2024-09-01T15:08:16.245+0000] {skipmixin.py:246} INFO - Skipping tasks []
+[2024-09-01T15:08:16.271+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-09-01T15:08:16.307+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=Apriori_project, task_id=branch_task, run_id=manual__2024-09-01T15:08:02.323470+00:00, execution_date=20240901T150802, start_date=20240901T150815, end_date=20240901T150816
+[2024-09-01T15:08:16.360+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2024-09-01T15:08:16.417+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-09-01T15:08:16.421+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
