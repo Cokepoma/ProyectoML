@@ -7394,3 +7394,75 @@ airflow.exceptions.AirflowException: The key 'Apriori project' has to be made of
 [2024-09-01T16:41:35.425+0000] {logging_mixin.py:188} INFO - [2024-09-01T16:41:35.425+0000] {dag.py:3089} INFO - Sync 1 DAGs
 [2024-09-01T16:41:35.463+0000] {logging_mixin.py:188} INFO - [2024-09-01T16:41:35.462+0000] {dag.py:3947} INFO - Setting next_dagrun for Apriori_project to 2024-09-01 00:00:00+00:00, run_after=2024-09-02 00:00:00+00:00
 [2024-09-01T16:41:35.500+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/main.py took 1.042 seconds
+[2024-09-01T16:42:06.090+0000] {processor.py:161} INFO - Started process (PID=13290) to work on /opt/airflow/dags/main.py
+[2024-09-01T16:42:06.092+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/main.py for tasks to queue
+[2024-09-01T16:42:06.094+0000] {logging_mixin.py:188} INFO - [2024-09-01T16:42:06.093+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/main.py
+[2024-09-01T16:42:06.775+0000] {logging_mixin.py:188} WARNING - /opt/airflow/dags/main.py:22 RemovedInAirflow3Warning: Param `schedule_interval` is deprecated and will be removed in a future release. Please use `schedule` instead.
+[2024-09-01T16:42:06.778+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py:485 RemovedInAirflow3Warning: provide_context is deprecated as of 2.0 and is no longer required
+[2024-09-01T16:42:06.780+0000] {logging_mixin.py:188} WARNING - /opt/airflow/dags/main.py:55 RemovedInAirflow3Warning: provide_context is deprecated as of 2.0 and is no longer required
+[2024-09-01T16:42:06.781+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py:485 RemovedInAirflow3Warning: provide_context is deprecated as of 2.0 and is no longer required
+[2024-09-01T16:42:06.783+0000] {logging_mixin.py:188} WARNING - /opt/airflow/dags/main.py:88 RemovedInAirflow3Warning: provide_context is deprecated as of 2.0 and is no longer required
+[2024-09-01T16:42:06.790+0000] {processor.py:840} INFO - DAG(s) 'Apriori_project' retrieved from /opt/airflow/dags/main.py
+[2024-09-01T16:42:06.826+0000] {logging_mixin.py:188} INFO - [2024-09-01T16:42:06.825+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-09-01T16:42:06.856+0000] {logging_mixin.py:188} INFO - [2024-09-01T16:42:06.856+0000] {dag.py:3947} INFO - Setting next_dagrun for Apriori_project to 2024-09-01 00:00:00+00:00, run_after=2024-09-02 00:00:00+00:00
+[2024-09-01T16:42:06.883+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/main.py took 0.802 seconds
+[2024-09-01T16:42:37.349+0000] {processor.py:161} INFO - Started process (PID=13299) to work on /opt/airflow/dags/main.py
+[2024-09-01T16:42:37.352+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/main.py for tasks to queue
+[2024-09-01T16:42:37.355+0000] {logging_mixin.py:188} INFO - [2024-09-01T16:42:37.354+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/main.py
+[2024-09-01T16:42:40.085+0000] {logging_mixin.py:188} WARNING - /opt/airflow/dags/main.py:22 RemovedInAirflow3Warning: Param `schedule_interval` is deprecated and will be removed in a future release. Please use `schedule` instead.
+[2024-09-01T16:42:40.102+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py:485 RemovedInAirflow3Warning: provide_context is deprecated as of 2.0 and is no longer required
+[2024-09-01T16:42:40.107+0000] {logging_mixin.py:188} WARNING - /opt/airflow/dags/main.py:55 RemovedInAirflow3Warning: provide_context is deprecated as of 2.0 and is no longer required
+[2024-09-01T16:42:40.119+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py:485 RemovedInAirflow3Warning: provide_context is deprecated as of 2.0 and is no longer required
+[2024-09-01T16:42:40.125+0000] {logging_mixin.py:188} WARNING - /opt/airflow/dags/main.py:88 RemovedInAirflow3Warning: provide_context is deprecated as of 2.0 and is no longer required
+[2024-09-01T16:42:40.157+0000] {processor.py:840} INFO - DAG(s) 'Apriori_project' retrieved from /opt/airflow/dags/main.py
+[2024-09-01T16:42:40.300+0000] {logging_mixin.py:188} INFO - [2024-09-01T16:42:40.299+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-09-01T16:42:40.418+0000] {logging_mixin.py:188} INFO - [2024-09-01T16:42:40.418+0000] {dag.py:3947} INFO - Setting next_dagrun for Apriori_project to 2024-09-01 00:00:00+00:00, run_after=2024-09-02 00:00:00+00:00
+[2024-09-01T16:42:40.476+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/main.py took 3.149 seconds
+[2024-09-01T16:43:10.954+0000] {processor.py:161} INFO - Started process (PID=13308) to work on /opt/airflow/dags/main.py
+[2024-09-01T16:43:10.956+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/main.py for tasks to queue
+[2024-09-01T16:43:10.958+0000] {logging_mixin.py:188} INFO - [2024-09-01T16:43:10.957+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/main.py
+[2024-09-01T16:43:12.159+0000] {logging_mixin.py:188} WARNING - /opt/airflow/dags/main.py:22 RemovedInAirflow3Warning: Param `schedule_interval` is deprecated and will be removed in a future release. Please use `schedule` instead.
+[2024-09-01T16:43:12.164+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py:485 RemovedInAirflow3Warning: provide_context is deprecated as of 2.0 and is no longer required
+[2024-09-01T16:43:12.167+0000] {logging_mixin.py:188} WARNING - /opt/airflow/dags/main.py:55 RemovedInAirflow3Warning: provide_context is deprecated as of 2.0 and is no longer required
+[2024-09-01T16:43:12.170+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py:485 RemovedInAirflow3Warning: provide_context is deprecated as of 2.0 and is no longer required
+[2024-09-01T16:43:12.174+0000] {logging_mixin.py:188} WARNING - /opt/airflow/dags/main.py:88 RemovedInAirflow3Warning: provide_context is deprecated as of 2.0 and is no longer required
+[2024-09-01T16:43:12.186+0000] {processor.py:840} INFO - DAG(s) 'Apriori_project' retrieved from /opt/airflow/dags/main.py
+[2024-09-01T16:43:12.239+0000] {logging_mixin.py:188} INFO - [2024-09-01T16:43:12.238+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-09-01T16:43:12.294+0000] {logging_mixin.py:188} INFO - [2024-09-01T16:43:12.293+0000] {dag.py:3947} INFO - Setting next_dagrun for Apriori_project to 2024-09-01 00:00:00+00:00, run_after=2024-09-02 00:00:00+00:00
+[2024-09-01T16:43:12.355+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/main.py took 1.413 seconds
+[2024-09-01T16:43:42.602+0000] {processor.py:161} INFO - Started process (PID=13317) to work on /opt/airflow/dags/main.py
+[2024-09-01T16:43:42.605+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/main.py for tasks to queue
+[2024-09-01T16:43:42.610+0000] {logging_mixin.py:188} INFO - [2024-09-01T16:43:42.609+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/main.py
+[2024-09-01T16:43:43.464+0000] {logging_mixin.py:188} WARNING - /opt/airflow/dags/main.py:22 RemovedInAirflow3Warning: Param `schedule_interval` is deprecated and will be removed in a future release. Please use `schedule` instead.
+[2024-09-01T16:43:43.470+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py:485 RemovedInAirflow3Warning: provide_context is deprecated as of 2.0 and is no longer required
+[2024-09-01T16:43:43.473+0000] {logging_mixin.py:188} WARNING - /opt/airflow/dags/main.py:55 RemovedInAirflow3Warning: provide_context is deprecated as of 2.0 and is no longer required
+[2024-09-01T16:43:43.475+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py:485 RemovedInAirflow3Warning: provide_context is deprecated as of 2.0 and is no longer required
+[2024-09-01T16:43:43.477+0000] {logging_mixin.py:188} WARNING - /opt/airflow/dags/main.py:88 RemovedInAirflow3Warning: provide_context is deprecated as of 2.0 and is no longer required
+[2024-09-01T16:43:43.491+0000] {processor.py:840} INFO - DAG(s) 'Apriori_project' retrieved from /opt/airflow/dags/main.py
+[2024-09-01T16:43:43.534+0000] {logging_mixin.py:188} INFO - [2024-09-01T16:43:43.533+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-09-01T16:43:43.561+0000] {logging_mixin.py:188} INFO - [2024-09-01T16:43:43.561+0000] {dag.py:3947} INFO - Setting next_dagrun for Apriori_project to 2024-09-01 00:00:00+00:00, run_after=2024-09-02 00:00:00+00:00
+[2024-09-01T16:43:43.592+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/main.py took 1.007 seconds
+[2024-09-01T16:44:13.972+0000] {processor.py:161} INFO - Started process (PID=13326) to work on /opt/airflow/dags/main.py
+[2024-09-01T16:44:13.974+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/main.py for tasks to queue
+[2024-09-01T16:44:13.975+0000] {logging_mixin.py:188} INFO - [2024-09-01T16:44:13.975+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/main.py
+[2024-09-01T16:44:14.626+0000] {logging_mixin.py:188} WARNING - /opt/airflow/dags/main.py:22 RemovedInAirflow3Warning: Param `schedule_interval` is deprecated and will be removed in a future release. Please use `schedule` instead.
+[2024-09-01T16:44:14.629+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py:485 RemovedInAirflow3Warning: provide_context is deprecated as of 2.0 and is no longer required
+[2024-09-01T16:44:14.630+0000] {logging_mixin.py:188} WARNING - /opt/airflow/dags/main.py:55 RemovedInAirflow3Warning: provide_context is deprecated as of 2.0 and is no longer required
+[2024-09-01T16:44:14.632+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py:485 RemovedInAirflow3Warning: provide_context is deprecated as of 2.0 and is no longer required
+[2024-09-01T16:44:14.634+0000] {logging_mixin.py:188} WARNING - /opt/airflow/dags/main.py:88 RemovedInAirflow3Warning: provide_context is deprecated as of 2.0 and is no longer required
+[2024-09-01T16:44:14.640+0000] {processor.py:840} INFO - DAG(s) 'Apriori_project' retrieved from /opt/airflow/dags/main.py
+[2024-09-01T16:44:14.675+0000] {logging_mixin.py:188} INFO - [2024-09-01T16:44:14.674+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-09-01T16:44:14.699+0000] {logging_mixin.py:188} INFO - [2024-09-01T16:44:14.699+0000] {dag.py:3947} INFO - Setting next_dagrun for Apriori_project to 2024-09-01 00:00:00+00:00, run_after=2024-09-02 00:00:00+00:00
+[2024-09-01T16:44:14.721+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/main.py took 0.757 seconds
+[2024-09-01T16:44:45.138+0000] {processor.py:161} INFO - Started process (PID=13335) to work on /opt/airflow/dags/main.py
+[2024-09-01T16:44:45.140+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/main.py for tasks to queue
+[2024-09-01T16:44:45.142+0000] {logging_mixin.py:188} INFO - [2024-09-01T16:44:45.142+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/main.py
+[2024-09-01T16:44:46.112+0000] {logging_mixin.py:188} WARNING - /opt/airflow/dags/main.py:22 RemovedInAirflow3Warning: Param `schedule_interval` is deprecated and will be removed in a future release. Please use `schedule` instead.
+[2024-09-01T16:44:46.119+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py:485 RemovedInAirflow3Warning: provide_context is deprecated as of 2.0 and is no longer required
+[2024-09-01T16:44:46.123+0000] {logging_mixin.py:188} WARNING - /opt/airflow/dags/main.py:55 RemovedInAirflow3Warning: provide_context is deprecated as of 2.0 and is no longer required
+[2024-09-01T16:44:46.127+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py:485 RemovedInAirflow3Warning: provide_context is deprecated as of 2.0 and is no longer required
+[2024-09-01T16:44:46.131+0000] {logging_mixin.py:188} WARNING - /opt/airflow/dags/main.py:88 RemovedInAirflow3Warning: provide_context is deprecated as of 2.0 and is no longer required
+[2024-09-01T16:44:46.145+0000] {processor.py:840} INFO - DAG(s) 'Apriori_project' retrieved from /opt/airflow/dags/main.py
+[2024-09-01T16:44:46.203+0000] {logging_mixin.py:188} INFO - [2024-09-01T16:44:46.202+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-09-01T16:44:46.249+0000] {logging_mixin.py:188} INFO - [2024-09-01T16:44:46.248+0000] {dag.py:3947} INFO - Setting next_dagrun for Apriori_project to 2024-09-01 00:00:00+00:00, run_after=2024-09-02 00:00:00+00:00
+[2024-09-01T16:44:46.290+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/main.py took 1.163 seconds
